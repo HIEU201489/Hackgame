@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN"
+ "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+ <key>PayloadContent</key>
+ <array>
+  <dict>
+   <key>PayloadType</key>
+   <string>com.apple.dnsSettings.managed</string>
+   <key>PayloadVersion</key>
+   <integer>1</integer>
+   <key>PayloadIdentifier</key>
+   <string>com.vnggaming.dns</string>
+   <key>PayloadUUID</key>
+   <string>VNG-DNS-1111</string>
+   <key>PayloadDisplayName</key>
+   <string>DNS 1.1.1.1</string>
+   <key>DNSSettings</key>
+   <dict>
+    <key>DNS</key>
+    <array>
+     <string>1.1.1.1</string>
+     <string>1.0.0.1</string>
+    </array>
+    <key>SupplementalMatchDomains</key>
+    <array>
+     <string></string>
+    </array>
+   </dict>
+  </dict>
+ </array>
+ <key>PayloadDisplayName</key>
+ <string>VNG Optimize Config</string>
+ <key>PayloadIdentifier</key>
+ <string>com.vng.optimize</string>
+ <key>PayloadRemovalDisallowed</key>
+ <false/>
+ <key>PayloadType</key>
+ <string>Configuration</string>
+ <key>PayloadUUID</key>
+ <string>vng-0001-config</string>
+ <key>PayloadVersion</key>
+ <integer>1</integer>
+</dict>
+</plist>
