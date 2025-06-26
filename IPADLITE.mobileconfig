@@ -1,107 +1,127 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN"
-"http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+ "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-    <key>PayloadUUID</key>
-    <string>AAAA-BBBB-CCCC-DDDD</string>
-    <key>PayloadType</key>
-    <string>Configuration</string>
-    <key>PayloadVersion</key>
-    <integer>1</integer>
-    <key>PayloadIdentifier</key>
-    <string>com.game.optimizer</string>
-    <key>PayloadOrganization</key>
-    <string>Game Optimizer</string>
-    <key>PayloadDisplayName</key>
-    <string>Tối ưu game - Giảm lag (10 giới hạn)</string>
-    <key>PayloadDescription</key>
-    <string>Giới hạn 10 thành phần hệ thống để giảm lag và tiết kiệm pin cho game</string>
-    <key>PayloadContent</key>
-    <array>
+  <key>PayloadType</key>
+  <string>Configuration</string>
+  <key>PayloadVersion</key>
+  <integer>1</integer>
+  <key>PayloadIdentifier</key>
+  <string>com.lagreduce.config</string>
+  <key>PayloadUUID</key>
+  <string>abcde-12345-fghij-67890</string>
+  <key>PayloadDisplayName</key>
+  <string>Cấu hình tối ưu game (10 giới hạn)</string>
+  <key>PayloadDescription</key>
+  <string>Giới hạn 10 chức năng không cần thiết để giảm lag, tiết kiệm pin và tăng tốc chơi game.</string>
+  <key>PayloadOrganization</key>
+  <string>LagReduceVN</string>
+  <key>PayloadContent</key>
+  <array>
 
-        <!-- 1. Giới hạn cập nhật nền -->
-        <dict>
-            <key>PayloadType</key>
-            <string>com.apple.applicationaccess</string>
-            <key>allowAppInstallation</key>
-            <false/>
-        </dict>
+    <!-- Giới hạn 1: Cập nhật nền -->
+    <dict>
+      <key>PayloadType</key>
+      <string>com.apple.applicationaccess</string>
+      <key>PayloadDisplayName</key>
+      <string>Giới hạn cập nhật nền</string>
+      <key>allowAppInstallation</key>
+      <false/>
+    </dict>
 
-        <!-- 2. Tắt Siri và Gợi ý Siri -->
-        <dict>
-            <key>PayloadType</key>
-            <string>com.apple.siri</string>
-            <key>allowSiri</key>
-            <false/>
-        </dict>
+    <!-- Giới hạn 2: Siri -->
+    <dict>
+      <key>PayloadType</key>
+      <string>com.apple.siri</string>
+      <key>PayloadDisplayName</key>
+      <string>Giới hạn Siri</string>
+      <key>allowSiri</key>
+      <false/>
+    </dict>
 
-        <!-- 3. Vô hiệu hoá iCloud Drive -->
-        <dict>
-            <key>PayloadType</key>
-            <string>com.apple.icloud</string>
-            <key>allowCloudDocumentSync</key>
-            <false/>
-        </dict>
+    <!-- Giới hạn 3: iCloud Drive -->
+    <dict>
+      <key>PayloadType</key>
+      <string>com.apple.icloud</string>
+      <key>PayloadDisplayName</key>
+      <string>Giới hạn iCloud Drive</string>
+      <key>allowCloudDocumentSync</key>
+      <false/>
+    </dict>
 
-        <!-- 4. Tắt AirDrop -->
-        <dict>
-            <key>PayloadType</key>
-            <string>com.apple.airdrop.managed</string>
-            <key>allowAirDrop</key>
-            <false/>
-        </dict>
+    <!-- Giới hạn 4: AirDrop -->
+    <dict>
+      <key>PayloadType</key>
+      <string>com.apple.airdrop.managed</string>
+      <key>PayloadDisplayName</key>
+      <string>Giới hạn AirDrop</string>
+      <key>allowAirDrop</key>
+      <false/>
+    </dict>
 
-        <!-- 5. Tắt Spotlight Search (tìm kiếm toàn hệ thống) -->
-        <dict>
-            <key>PayloadType</key>
-            <string>com.apple.spotlight</string>
-            <key>allowSpotlightInternetSearch</key>
-            <false/>
-        </dict>
+    <!-- Giới hạn 5: Spotlight -->
+    <dict>
+      <key>PayloadType</key>
+      <string>com.apple.spotlight</string>
+      <key>PayloadDisplayName</key>
+      <string>Giới hạn Spotlight Search</string>
+      <key>allowSpotlightInternetSearch</key>
+      <false/>
+    </dict>
 
-        <!-- 6. Giới hạn dịch vụ vị trí -->
-        <dict>
-            <key>PayloadType</key>
-            <string>com.apple.location</string>
-            <key>locationServicesEnabled</key>
-            <false/>
-        </dict>
+    <!-- Giới hạn 6: Dịch vụ vị trí -->
+    <dict>
+      <key>PayloadType</key>
+      <string>com.apple.location</string>
+      <key>PayloadDisplayName</key>
+      <string>Giới hạn Dịch vụ Vị trí</string>
+      <key>locationServicesEnabled</key>
+      <false/>
+    </dict>
 
-        <!-- 7. Tắt cập nhật iOS tự động -->
-        <dict>
-            <key>PayloadType</key>
-            <string>com.apple.SoftwareUpdate</string>
-            <key>AutomaticCheckEnabled</key>
-            <false/>
-        </dict>
+    <!-- Giới hạn 7: Cập nhật iOS tự động -->
+    <dict>
+      <key>PayloadType</key>
+      <string>com.apple.SoftwareUpdate</string>
+      <key>PayloadDisplayName</key>
+      <string>Giới hạn cập nhật iOS tự động</string>
+      <key>AutomaticCheckEnabled</key>
+      <false/>
+    </dict>
 
-        <!-- 8. Tắt Analytics chia sẻ về Apple -->
-        <dict>
-            <key>PayloadType</key>
-            <string>com.apple.SubmitDiagInfo</string>
-            <key>SubmitDiagInfo</key>
-            <false/>
-        </dict>
+    <!-- Giới hạn 8: Chia sẻ Analytics -->
+    <dict>
+      <key>PayloadType</key>
+      <string>com.apple.SubmitDiagInfo</string>
+      <key>PayloadDisplayName</key>
+      <string>Giới hạn Gửi dữ liệu phân tích</string>
+      <key>SubmitDiagInfo</key>
+      <false/>
+    </dict>
 
-        <!-- 9. Tắt Handoff (liên kết thiết bị) -->
-        <dict>
-            <key>PayloadType</key>
-            <string>com.apple.applicationaccess</string>
-            <key>allowContinuity</key>
-            <false/>
-        </dict>
+    <!-- Giới hạn 9: Handoff -->
+    <dict>
+      <key>PayloadType</key>
+      <string>com.apple.applicationaccess</string>
+      <key>PayloadDisplayName</key>
+      <string>Giới hạn Handoff</string>
+      <key>allowContinuity</key>
+      <false/>
+    </dict>
 
-        <!-- 10. Ưu tiên kết nối Wi-Fi (giảm độ trễ) -->
-        <dict>
-            <key>PayloadType</key>
-            <string>com.apple.wifi.managed</string>
-            <key>AutoJoin</key>
-            <true/>
-            <key>CaptiveBypass</key>
-            <true/>
-        </dict>
+    <!-- Giới hạn 10: Ưu tiên Wi-Fi -->
+    <dict>
+      <key>PayloadType</key>
+      <string>com.apple.wifi.managed</string>
+      <key>PayloadDisplayName</key>
+      <string>Giới hạn độ trễ mạng (Wi-Fi ưu tiên)</string>
+      <key>AutoJoin</key>
+      <true/>
+      <key>CaptiveBypass</key>
+      <true/>
+    </dict>
 
-    </array>
+  </array>
 </dict>
 </plist>
