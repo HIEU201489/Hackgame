@@ -3,39 +3,183 @@
  "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+  <key>PayloadDisplayName</key>
+  <string>Giới hạn giảm lag Game</string>
+  <key>PayloadIdentifier</key>
+  <string>com.lagreduce.config</string>
   <key>PayloadType</key>
   <string>Configuration</string>
+  <key>PayloadUUID</key>
+  <string>00000000-0000-0000-0000-000000000001</string>
   <key>PayloadVersion</key>
   <integer>1</integer>
-  <key>PayloadIdentifier</key>
-  <string>com.simpleconfig.safe</string>
-  <key>PayloadUUID</key>
-  <string>12345678-1234-1234-1234-1234567890AB</string>
-  <key>PayloadDisplayName</key>
-  <string>Safe Config</string>
-  <key>PayloadDescription</key>
-  <string>Safe config to avoid error when installing</string>
-  <key>ConsentText</key>
-  <dict>
-    <key>default</key>
-    <string>Accept this profile to apply light performance settings.</string>
-  </dict>
+  <key>PayloadOrganization</key>
+  <string>LagReduceVN</string>
   <key>PayloadContent</key>
   <array>
+
+    <!-- 1. Vô hiệu AirDrop -->
+    <dict>
+      <key>PayloadType</key>
+      <string>com.apple.airdrop.managed</string>
+      <key>PayloadVersion</key>
+      <integer>1</integer>
+      <key>PayloadIdentifier</key>
+      <string>com.lagreduce.airdrop</string>
+      <key>PayloadUUID</key>
+      <string>00000000-0000-0000-0000-000000000002</string>
+      <key>PayloadEnabled</key>
+      <true/>
+      <key>AllowAirDrop</key>
+      <false/>
+    </dict>
+
+    <!-- 2. Vô hiệu Siri -->
+    <dict>
+      <key>PayloadType</key>
+      <string>com.apple.siri</string>
+      <key>PayloadVersion</key>
+      <integer>1</integer>
+      <key>PayloadIdentifier</key>
+      <string>com.lagreduce.siri</string>
+      <key>PayloadUUID</key>
+      <string>00000000-0000-0000-0000-000000000003</string>
+      <key>PayloadEnabled</key>
+      <true/>
+      <key>DisableSiri</key>
+      <true/>
+    </dict>
+
+    <!-- 3. Tắt Game Center -->
+    <dict>
+      <key>PayloadType</key>
+      <string>com.apple.gamed</string>
+      <key>PayloadVersion</key>
+      <integer>1</integer>
+      <key>PayloadIdentifier</key>
+      <string>com.lagreduce.gamecenter</string>
+      <key>PayloadUUID</key>
+      <string>00000000-0000-0000-0000-000000000004</string>
+      <key>PayloadEnabled</key>
+      <true/>
+      <key>AllowGameCenter</key>
+      <false/>
+    </dict>
+
+    <!-- 4. Tắt iCloud -->
+    <dict>
+      <key>PayloadType</key>
+      <string>com.apple.icloud.managed</string>
+      <key>PayloadVersion</key>
+      <integer>1</integer>
+      <key>PayloadIdentifier</key>
+      <string>com.lagreduce.icloud</string>
+      <key>PayloadUUID</key>
+      <string>00000000-0000-0000-0000-000000000005</string>
+      <key>PayloadEnabled</key>
+      <true/>
+      <key>AllowCloudDocumentSync</key>
+      <false/>
+      <key>AllowPhotoStream</key>
+      <false/>
+    </dict>
+
+    <!-- 5. Tắt Safari -->
     <dict>
       <key>PayloadType</key>
       <string>com.apple.applicationaccess</string>
       <key>PayloadVersion</key>
       <integer>1</integer>
       <key>PayloadIdentifier</key>
-      <string>com.safe.restrict</string>
+      <string>com.lagreduce.safari</string>
       <key>PayloadUUID</key>
-      <string>87654321-4321-4321-4321-0987654321BA</string>
-      <key>PayloadDisplayName</key>
-      <string>Light Restriction</string>
-      <key>allowUSBRestrictedMode</key>
+      <string>00000000-0000-0000-0000-000000000006</string>
+      <key>PayloadEnabled</key>
+      <true/>
+      <key>allowSafari</key>
+      <false/>
+    </dict>
+
+    <!-- 6. Tắt FaceTime -->
+    <dict>
+      <key>PayloadType</key>
+      <string>com.apple.applicationaccess</string>
+      <key>PayloadVersion</key>
+      <integer>1</integer>
+      <key>PayloadIdentifier</key>
+      <string>com.lagreduce.facetime</string>
+      <key>PayloadUUID</key>
+      <string>00000000-0000-0000-0000-000000000007</string>
+      <key>PayloadEnabled</key>
+      <true/>
+      <key>allowFaceTime</key>
+      <false/>
+    </dict>
+
+    <!-- 7. Tắt iMessage -->
+    <dict>
+      <key>PayloadType</key>
+      <string>com.apple.applicationaccess</string>
+      <key>PayloadVersion</key>
+      <integer>1</integer>
+      <key>PayloadIdentifier</key>
+      <string>com.lagreduce.imessage</string>
+      <key>PayloadUUID</key>
+      <string>00000000-0000-0000-0000-000000000008</string>
+      <key>PayloadEnabled</key>
+      <true/>
+      <key>allowiMessage</key>
+      <false/>
+    </dict>
+
+    <!-- 8. Tắt Handoff -->
+    <dict>
+      <key>PayloadType</key>
+      <string>com.apple.general</string>
+      <key>PayloadVersion</key>
+      <integer>1</integer>
+      <key>PayloadIdentifier</key>
+      <string>com.lagreduce.handoff</string>
+      <key>PayloadUUID</key>
+      <string>00000000-0000-0000-0000-000000000009</string>
+      <key>PayloadEnabled</key>
+      <true/>
+      <key>AllowHandoff</key>
+      <false/>
+    </dict>
+
+    <!-- 9. Tắt iTunes Store -->
+    <dict>
+      <key>PayloadType</key>
+      <string>com.apple.applicationaccess</string>
+      <key>PayloadVersion</key>
+      <integer>1</integer>
+      <key>PayloadIdentifier</key>
+      <string>com.lagreduce.itunes</string>
+      <key>PayloadUUID</key>
+      <string>00000000-0000-0000-0000-000000000010</string>
+      <key>PayloadEnabled</key>
+      <true/>
+      <key>allowiTunes</key>
+      <false/>
+    </dict>
+
+    <!-- 10. Tắt AirPlay -->
+    <dict>
+      <key>PayloadType</key>
+      <string>com.apple.airplay</string>
+      <key>PayloadVersion</key>
+      <integer>1</integer>
+      <key>PayloadIdentifier</key>
+      <string>com.lagreduce.airplay</string>
+      <key>PayloadUUID</key>
+      <string>00000000-0000-0000-0000-000000000011</string>
+      <key>PayloadEnabled</key>
+      <true/>
+      <key>DisableAirPlay</key>
       <true/>
     </dict>
+
   </array>
 </dict>
 </plist>
