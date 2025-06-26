@@ -1,32 +1,58 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN"
-  "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+ "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+  <key>PayloadType</key>
+  <string>Configuration</string>
+  <key>PayloadVersion</key>
+  <integer>1</integer>
+  <key>PayloadIdentifier</key>
+  <string>com.gameboost.config</string>
+  <key>PayloadUUID</key>
+  <string>11111111-2222-3333-4444-555555555555</string>
+  <key>PayloadDisplayName</key>
+  <string>Cấu hình Tối ưu Game</string>
   <key>PayloadDescription</key>
-  <string>Cấu hình tối ưu hoá hiệu năng và giới hạn ứng dụng nền.</string>
+  <string>Tối ưu hóa thiết bị iPad Gen 5 để chơi game mượt hơn</string>
   <key>ConsentText</key>
   <dict>
     <key>default</key>
-    <string>Bằng cách cài đặt cấu hình này, bạn đồng ý với các điều chỉnh nhằm tăng tốc thiết bị.</string>
+    <string>Chấp nhận cài đặt cấu hình tối ưu hiệu suất.</string>
   </dict>
-  <key>PayloadDisplayName</key>
-  <string>Cấu hình Tối ưu Game</string>
-  <key>PayloadIdentifier</key>
-  <string>com.tuybien.gameboost</string>
-  <key>PayloadType</key>
-  <string>Configuration</string>
-  <key>PayloadUUID</key>
-  <string>D66F52FA-6E49-44A7-9E7F-1234567890AB</string>
-  <key>PayloadVersion</key>
-  <integer>1</integer>
   <key>PayloadContent</key>
   <array>
 
-    <!-- Wi-Fi setting -->
+    <!-- 8 Giới hạn -->
     <dict>
       <key>PayloadType</key>
-      <string>com.apple.wifi.managed</string>
+      <string>com.apple.applicationaccess</string>
       <key>PayloadVersion</key>
       <integer>1</integer>
-      <key>PayloadIdentifi
+      <key>PayloadIdentifier</key>
+      <string>com.gameboost.restrict</string>
+      <key>PayloadUUID</key>
+      <string>AAAA1111-BBBB-2222-CCCC-3333DDDD4444</string>
+      <key>PayloadDisplayName</key>
+      <string>Giới hạn hệ thống</string>
+      <key>allowSafari</key>
+      <false/>
+      <key>allowAppInstallation</key>
+      <false/>
+      <key>allowCloudBackup</key>
+      <false/>
+      <key>allowCloudDocuments</key>
+      <false/>
+      <key>allowBluetoothModification</key>
+      <false/>
+      <key>allowScreenShot</key>
+      <false/>
+      <key>allowVideoConferencing</key>
+      <false/>
+      <key>allowUSBRestrictedMode</key>
+      <true/>
+    </dict>
+
+  </array>
+</dict>
+</plist>
