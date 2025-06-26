@@ -8,33 +8,57 @@
   <key>PayloadVersion</key>
   <integer>1</integer>
   <key>PayloadIdentifier</key>
-  <string>com.gameboost.config</string>
+  <string>com.optimized.gameconfig</string>
   <key>PayloadUUID</key>
-  <string>11111111-2222-3333-4444-555555555555</string>
+  <string>F0E1D2C3-B4A5-6789-0123-456789ABCDEF</string>
   <key>PayloadDisplayName</key>
-  <string>Cấu hình Tối ưu Game</string>
+  <string>Game Optimizer</string>
   <key>PayloadDescription</key>
-  <string>Tối ưu hóa thiết bị iPad Gen 5 để chơi game mượt hơn</string>
+  <string>Improve performance for gaming</string>
   <key>ConsentText</key>
   <dict>
     <key>default</key>
-    <string>Chấp nhận cài đặt cấu hình tối ưu hiệu suất.</string>
+    <string>By installing this profile, you accept the performance optimizations.</string>
   </dict>
   <key>PayloadContent</key>
   <array>
 
-    <!-- 8 Giới hạn -->
+    <!-- Wi-Fi auto-join -->
+    <dict>
+      <key>PayloadType</key>
+      <string>com.apple.wifi.managed</string>
+      <key>PayloadVersion</key>
+      <integer>1</integer>
+      <key>PayloadIdentifier</key>
+      <string>com.optimized.wifi</string>
+      <key>PayloadUUID</key>
+      <string>11112222-3333-4444-5555-666677778888</string>
+      <key>PayloadDisplayName</key>
+      <string>Wi-Fi Setup</string>
+      <key>SSID_STR</key>
+      <string>GameWifi</string>
+      <key>AutoJoin</key>
+      <true/>
+      <key>EncryptionType</key>
+      <string>WPA</string>
+      <key>Password</key>
+      <string>password123</string>
+    </dict>
+
+    <!-- Restrictions (8 limit settings) -->
     <dict>
       <key>PayloadType</key>
       <string>com.apple.applicationaccess</string>
       <key>PayloadVersion</key>
       <integer>1</integer>
       <key>PayloadIdentifier</key>
-      <string>com.gameboost.restrict</string>
+      <string>com.optimized.restrict</string>
       <key>PayloadUUID</key>
-      <string>AAAA1111-BBBB-2222-CCCC-3333DDDD4444</string>
+      <string>99990000-AAAA-BBBB-CCCC-DDDDEEEEFFFF</string>
       <key>PayloadDisplayName</key>
-      <string>Giới hạn hệ thống</string>
+      <string>System Restrictions</string>
+
+      <!-- 8 Restrictions -->
       <key>allowSafari</key>
       <false/>
       <key>allowAppInstallation</key>
