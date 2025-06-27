@@ -17,7 +17,7 @@
   <string>Giảm lag, ưu tiên tốc độ chơi game online.</string>
   <key>PayloadContent</key>
   <array>
-    <!-- DNS cấu hình Cloudflare và Google -->
+    <!-- DNS dùng IPv4 thường, không phải DNS-over-HTTPS -->
     <dict>
       <key>PayloadType</key>
       <string>com.apple.dnsSettings.managed</string>
@@ -31,8 +31,6 @@
       <string>Game DNS</string>
       <key>DNSSettings</key>
       <dict>
-        <key>DNSProtocol</key>
-        <string>HTTPS</string>
         <key>ServerAddresses</key>
         <array>
           <string>1.1.1.1</string>
