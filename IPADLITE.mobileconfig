@@ -1,127 +1,79 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN"
- "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" 
+"http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+  <key>PayloadDisplayName</key>
+  <string>GameBoost FreeFire</string>
+  <key>PayloadIdentifier</key>
+  <string>com.hieu.gameboost</string>
   <key>PayloadType</key>
   <string>Configuration</string>
+  <key>PayloadUUID</key>
+  <string>fbb20d7e-1111-4ccc-aaaa-ff9988776655</string>
   <key>PayloadVersion</key>
   <integer>1</integer>
-  <key>PayloadIdentifier</key>
-  <string>com.lagreduce.config</string>
-  <key>PayloadUUID</key>
-  <string>abcde-12345-fghij-67890</string>
-  <key>PayloadDisplayName</key>
-  <string>Cấu hình tối ưu game (10 giới hạn)</string>
   <key>PayloadDescription</key>
-  <string>Giới hạn 10 chức năng không cần thiết để giảm lag, tiết kiệm pin và tăng tốc chơi game.</string>
-  <key>PayloadOrganization</key>
-  <string>LagReduceVN</string>
+  <string>Giảm lag, ưu tiên tốc độ chơi game online.</string>
   <key>PayloadContent</key>
   <array>
+    <!-- DNS cấu hình Cloudflare và Google -->
+    <dict>
+      <key>PayloadType</key>
+      <string>com.apple.dnsSettings.managed</string>
+      <key>PayloadVersion</key>
+      <integer>1</integer>
+      <key>PayloadIdentifier</key>
+      <string>com.hieu.gameboost.dns</string>
+      <key>PayloadUUID</key>
+      <string>aaaabbbb-cccc-dddd-eeee-000011112222</string>
+      <key>PayloadDisplayName</key>
+      <string>Game DNS</string>
+      <key>DNSSettings</key>
+      <dict>
+        <key>DNSProtocol</key>
+        <string>HTTPS</string>
+        <key>ServerAddresses</key>
+        <array>
+          <string>1.1.1.1</string>
+          <string>8.8.8.8</string>
+        </array>
+      </dict>
+    </dict>
 
-    <!-- Giới hạn 1: Cập nhật nền -->
+    <!-- Giới hạn dịch vụ nền không cần thiết -->
     <dict>
       <key>PayloadType</key>
       <string>com.apple.applicationaccess</string>
+      <key>PayloadVersion</key>
+      <integer>1</integer>
+      <key>PayloadIdentifier</key>
+      <string>com.hieu.gameboost.limits</string>
+      <key>PayloadUUID</key>
+      <string>bbbbcccc-dddd-eeee-ffff-123456789abc</string>
       <key>PayloadDisplayName</key>
-      <string>Giới hạn cập nhật nền</string>
-      <key>allowAppInstallation</key>
-      <false/>
-    </dict>
-
-    <!-- Giới hạn 2: Siri -->
-    <dict>
-      <key>PayloadType</key>
-      <string>com.apple.siri</string>
-      <key>PayloadDisplayName</key>
-      <string>Giới hạn Siri</string>
-      <key>allowSiri</key>
-      <false/>
-    </dict>
-
-    <!-- Giới hạn 3: iCloud Drive -->
-    <dict>
-      <key>PayloadType</key>
-      <string>com.apple.icloud</string>
-      <key>PayloadDisplayName</key>
-      <string>Giới hạn iCloud Drive</string>
+      <string>Giới hạn nền</string>
       <key>allowCloudDocumentSync</key>
       <false/>
-    </dict>
-
-    <!-- Giới hạn 4: AirDrop -->
-    <dict>
-      <key>PayloadType</key>
-      <string>com.apple.airdrop.managed</string>
-      <key>PayloadDisplayName</key>
-      <string>Giới hạn AirDrop</string>
+      <key>allowCloudPhotoLibrary</key>
+      <false/>
+      <key>allowDiagnosticSubmission</key>
+      <false/>
+      <key>allowAppInstallation</key>
+      <true/>
+      <key>allowInAppPurchases</key>
+      <true/>
+      <key>allowAutomaticAppDownloads</key>
+      <false/>
+      <key>allowAppCellularDataModification</key>
+      <false/>
+      <key>allowMusicService</key>
+      <false/>
+      <key>allowNews</key>
+      <false/>
       <key>allowAirDrop</key>
       <false/>
     </dict>
-
-    <!-- Giới hạn 5: Spotlight -->
-    <dict>
-      <key>PayloadType</key>
-      <string>com.apple.spotlight</string>
-      <key>PayloadDisplayName</key>
-      <string>Giới hạn Spotlight Search</string>
-      <key>allowSpotlightInternetSearch</key>
-      <false/>
-    </dict>
-
-    <!-- Giới hạn 6: Dịch vụ vị trí -->
-    <dict>
-      <key>PayloadType</key>
-      <string>com.apple.location</string>
-      <key>PayloadDisplayName</key>
-      <string>Giới hạn Dịch vụ Vị trí</string>
-      <key>locationServicesEnabled</key>
-      <false/>
-    </dict>
-
-    <!-- Giới hạn 7: Cập nhật iOS tự động -->
-    <dict>
-      <key>PayloadType</key>
-      <string>com.apple.SoftwareUpdate</string>
-      <key>PayloadDisplayName</key>
-      <string>Giới hạn cập nhật iOS tự động</string>
-      <key>AutomaticCheckEnabled</key>
-      <false/>
-    </dict>
-
-    <!-- Giới hạn 8: Chia sẻ Analytics -->
-    <dict>
-      <key>PayloadType</key>
-      <string>com.apple.SubmitDiagInfo</string>
-      <key>PayloadDisplayName</key>
-      <string>Giới hạn Gửi dữ liệu phân tích</string>
-      <key>SubmitDiagInfo</key>
-      <false/>
-    </dict>
-
-    <!-- Giới hạn 9: Handoff -->
-    <dict>
-      <key>PayloadType</key>
-      <string>com.apple.applicationaccess</string>
-      <key>PayloadDisplayName</key>
-      <string>Giới hạn Handoff</string>
-      <key>allowContinuity</key>
-      <false/>
-    </dict>
-
-    <!-- Giới hạn 10: Ưu tiên Wi-Fi -->
-    <dict>
-      <key>PayloadType</key>
-      <string>com.apple.wifi.managed</string>
-      <key>PayloadDisplayName</key>
-      <string>Giới hạn độ trễ mạng (Wi-Fi ưu tiên)</string>
-      <key>AutoJoin</key>
-      <true/>
-      <key>CaptiveBypass</key>
-      <true/>
-    </dict>
-
   </array>
 </dict>
 </plist>
