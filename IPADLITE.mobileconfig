@@ -37,7 +37,39 @@
       </dict>
     </dict>
 
-    <!-- Giới hạn dịch vụ nền không cần thiết -->
+   <!-- Ưu tiên UDP game -->
+<dict>
+  <key>PayloadType</key>
+  <string>com.apple.vpn.managed</string>
+  <key>PayloadVersion</key>
+  <integer>1</integer>
+  <key>PayloadIdentifier</key>
+  <string>com.hieu.gameboost.vpn</string>
+  <key>PayloadUUID</key>
+  <string>12345678-aaaa-bbbb-cccc-999988887777</string>
+  <key>PayloadDisplayName</key>
+  <string>UDP Boost</string>
+  <key>UserDefinedName</key>
+  <string>UDPGameBoost</string>
+  <key>VPNType</key>
+  <string>IKEv2</string>
+  <key>IKEv2</key>
+  <dict>
+    <key>RemoteAddress</key>
+    <string>dummy.vpngameboost.com</string> <!-- Không kết nối thật, chỉ tạo ưu tiên -->
+    <key>UseConfigurationAttributeInternalIPSubnet</key>
+    <true/>
+    <key>DisableMOBIKE</key>
+    <true/>
+    <key>EnablePFS</key>
+    <true/>
+    <key>DeadPeerDetectionRate</key>
+    <string>Medium</string>
+    <key>AuthenticationMethod</key>
+    <string>None</string>
+  </dict>
+</dict>
+ <!-- Giới hạn dịch vụ nền không cần thiết -->
     <dict>
       <key>PayloadType</key>
       <string>com.apple.applicationaccess</string>
