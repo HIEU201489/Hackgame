@@ -1,107 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" 
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN"  
 "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-  <key>PayloadDisplayName</key>
-  <string>GameBoost FreeFire</string>
-  <key>PayloadIdentifier</key>
-  <string>com.hieu.gameboost</string>
-  <key>PayloadType</key>
-  <string>Configuration</string>
-  <key>PayloadUUID</key>
-  <string>fbb20d7e-1111-4ccc-aaaa-ff9988776655</string>
-  <key>PayloadVersion</key>
-  <integer>1</integer>
-  <key>PayloadDescription</key>
-  <string>Giảm lag, ưu tiên tốc độ chơi game online.</string>
-  <key>PayloadContent</key>
-  <array>
-    <!-- DNS dùng IPv4 thường, không phải DNS-over-HTTPS -->
-    <dict>
-      <key>PayloadType</key>
-      <string>com.apple.dnsSettings.managed</string>
-      <key>PayloadVersion</key>
-      <integer>1</integer>
-      <key>PayloadIdentifier</key>
-      <string>com.hieu.gameboost.dns</string>
-      <key>PayloadUUID</key>
-      <string>aaaabbbb-cccc-dddd-eeee-000011112222</string>
-      <key>PayloadDisplayName</key>
-      <string>Game DNS</string>
-      <key>DNSSettings</key>
-      <dict>
-        <key>ServerAddresses</key>
-        <array>
-        </array>
-      </dict>
-    </dict>
-
-   <!-- Ưu tiên UDP game -->
-<dict>
-  <key>PayloadType</key>
-  <string>com.apple.vpn.managed</string>
-  <key>PayloadVersion</key>
-  <integer>1</integer>
-  <key>PayloadIdentifier</key>
-  <string>com.hieu.gameboost.vpn</string>
-  <key>PayloadUUID</key>
-  <string>12345678-aaaa-bbbb-cccc-999988887777</string>
-  <key>PayloadDisplayName</key>
-  <string>UDP Boost</string>
-  <key>UserDefinedName</key>
-  <string>UDPGameBoost</string>
-  <key>VPNType</key>
-  <string>IKEv2</string>
-  <key>IKEv2</key>
-  <dict>
-    <key>RemoteAddress</key>
-    <string>dummy.vpngameboost.com</string> <!-- Không kết nối thật, chỉ tạo ưu tiên -->
-    <key>UseConfigurationAttributeInternalIPSubnet</key>
+    <key>sensitivity_scope</key>
+    <integer>125</integer>
+    <key>sensitivity_red_dot</key>
+    <integer>140</integer>
+    <key>sensitivity_general</key>
+    <integer>135</integer>
+    <key>sensitivity_awm</key>
+    <integer>80</integer>
+    <key>aim_assist</key>
     <true/>
-    <key>DisableMOBIKE</key>
-    <true/>
-    <key>EnablePFS</key>
-    <true/>
-    <key>DeadPeerDetectionRate</key>
-    <string>Medium</string>
-    <key>AuthenticationMethod</key>
-    <string>None</string>
-  </dict>
-</dict>
- <!-- Giới hạn dịch vụ nền không cần thiết -->
-    <dict>
-      <key>PayloadType</key>
-      <string>com.apple.applicationaccess</string>
-      <key>PayloadVersion</key>
-      <integer>1</integer>
-      <key>PayloadIdentifier</key>
-      <string>com.hieu.gameboost.limits</string>
-      <key>PayloadUUID</key>
-      <string>bbbbcccc-dddd-eeee-ffff-123456789abc</string>
-      <key>PayloadDisplayName</key>
-      <string>Giới hạn nền</string>
-      <key>allowCloudDocumentSync</key>
-      <false/>
-      <key>allowCloudPhotoLibrary</key>
-      <false/>
-      <key>allowDiagnosticSubmission</key>
-      <false/>
-      <key>allowAppInstallation</key>
-      <true/>
-      <key>allowInAppPurchases</key>
-      <true/>
-      <key>allowAutomaticAppDownloads</key>
-      <false/>
-      <key>allowAppCellularDataModification</key>
-      <false/>
-      <key>allowMusicService</key>
-      <false/>
-      <key>allowNews</key>
-      <false/>
-      <key>allowAirDrop</key>
-      <false/>
-    </dict>
-  </array>
+    <key>graphic_setting</key>
+    <string>smooth</string>
+    <key>high_fps</key>
+    <false/>
+    <key>touch_response</key>
+    <string>fast</string>
 </dict>
 </plist>
